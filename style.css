@@ -1,0 +1,310 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Poppins Light'), local('Poppins-Light'),
+         url('font/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poppins Regular'), local('Poppins-Regular'),
+         url('font/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Poppins Medium'), local('Poppins-Medium'),
+         url('font/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+         url('font/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Poppins Bold'), local('Poppins-Bold'),
+         url('font/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'),
+         url('font/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Poppins Black'), local('Poppins-Black'),
+         url('font/Poppins-Black.ttf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.navigation { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 150px;
+    background-color: rgba(0, 51, 41);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.navigation a {
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 150px;
+    min-height: 50px;
+    color: #fff;
+    padding: 6px 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.navigation a.active, a:hover {
+    background: #359381;
+    color: #fff;
+}
+
+.content {
+    margin-left: 150px;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    margin-left: 150px;
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.gradient1 {
+    background: linear-gradient(to bottom, rgba(0, 51, 41, 1), rgba(0, 51, 41, 0.9));
+}
+
+.gradient2 {
+    background: linear-gradient(to bottom, rgba(0, 51, 41, 0.9), rgba(0, 51, 41, 0.8));
+}
+
+.gradient3 {
+    background: linear-gradient(to bottom, rgba(0, 51, 41, 0.8), rgba(0, 51, 41, 0.7));
+}
+
+.dark {
+    background: rgba(0, 51, 41, 1);
+}
+
+.light {
+    background: rgba(0, 51, 41, 0.7);
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    color: #e7ffe8;
+}
+
+.sec h2 {
+    font-size: 3em;
+    color: #fb9cb1;
+    margin-bottom: 10px;
+}
+
+.sec h3, h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffc6d2;
+}
+
+.sec p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.highlight {
+    color: #ffc6d2;
+}
+
+.skill {
+    border-style: solid; /* Use 'solid' instead of 'line' */
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    width: 100%;
+    transition: width 0.4s ease;
+}
+
+.long {
+    width: 90%;
+}
+
+.medium {
+    width: 70%;
+}
+
+.short {
+    width: 50%;
+}
+
+.content-wrapper {
+    /* Additional styling for better control, if needed */
+    display: inline-block;
+    text-align: left; /* Reset text-align for the inner container if necessary */
+}
+
+.content-wrapper p {
+    /* Additional styling for better control, if needed */
+    display: inline-block;
+    text-align: left; /* Reset text-align for the inner container if necessary */
+    color:#fe5176;
+    font-size: 20px;
+}
+
+video {
+    margin-top: 50px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 50px;
+}
+
+.flex-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.flex-inner-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.buffer {
+    margin-top: 40px;
+}
+
+.tag-container {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tag-container p {
+    flex: 1;
+    background-color: #fff;
+    color: #fe5176;;
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    max-width: 180px; /* Set a consistent width for both tags and paragraphs */
+    height: 45px;
+}
+
+.icon {
+    width: 20px; /* Adjust the icon size as needed */
+    height: 20px;
+}
+
+.no-style {
+    text-decoration: none;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-buffer {
+    padding-bottom: 300px;
+}
+
+.achievement-buffer {
+    padding-bottom: 300px;
+}
+
+.education-buffer {
+    padding-bottom: 500px;
+}
