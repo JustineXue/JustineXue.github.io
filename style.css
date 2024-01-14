@@ -308,3 +308,21 @@ video {
 .education-buffer {
     padding-bottom: 500px;
 }
+
+#arrow-container {
+    margin-left: 90px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 35px solid #fff; /* Set the color of your arrow */
+}

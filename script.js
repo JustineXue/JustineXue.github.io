@@ -15,59 +15,6 @@ window.addEventListener('scroll', () => {
     hill1.style.top = value * 1 + 'px';
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const header = document.querySelector('header');
-//     const navLinks = document.querySelectorAll('header .navigation a'); // Fix the selector
-
-//     let scrolling = false; // Flag to track if scrolling is in progress
-//     const lastSectionId = 'education'; // Change this to the id of the last section you want to scroll to
-
-//     window.addEventListener('scroll', function () {
-//         // if (!scrolling) {
-//             const scrollPosition = window.scrollY;
-
-//             navLinks.forEach(link => {
-//                 const targetId = link.getAttribute('href').substring(1);
-//                 const targetSection = document.getElementById(targetId);
-
-//                 if (targetSection.offsetTop <= scrollPosition && targetSection.offsetTop + targetSection.offsetHeight > scrollPosition) {
-//                     link.classList.add('active');
-//                 } else {
-//                     link.classList.remove('active');
-//                 }
-//             });
-
-//             // const opacity = 1 - scrollPosition / 300;
-//             // header.style.background = `linear-gradient(to bottom, rgba(255, 0, 0, 1), rgba(255, 0, 0, ${opacity}))`;
-
-//             // Stop scrolling if the user has reached the last section
-//         //     if (lastSectionId && scrollPosition >= document.getElementById(lastSectionId).offsetTop) {
-//         //         scrolling = false; // Set scrolling flag to true
-//         //     }
-//         // }
-//     });
-
-//     // Smooth scrolling when a navigation link is clicked
-//     navLinks.forEach(link => {
-//         link.addEventListener('click', function (e) {
-//             e.preventDefault();
-//             scrolling = true; // Set scrolling flag to true
-//             const targetId = this.getAttribute('href').substring(1);
-//             const targetSection = document.getElementById(targetId);
-
-//             window.scrollTo({
-//                 top: targetSection.offsetTop,
-//                 behavior: 'smooth'
-//             });
-
-//             // Set a timeout to reset the scrolling flag after the scrolling animation completes
-//             setTimeout(function () {
-//                 scrolling = false;
-//             }, 1000); // Adjust the timeout duration as needed
-//         });
-//     });
-// });
-
 document.addEventListener('DOMContentLoaded', function () {
     const navItems = document.querySelectorAll('.navigation a');
     const sections = document.querySelectorAll('.content section');
@@ -117,4 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const arrowContainer = document.getElementById('arrow-container');
+    let isMouseMoving = false;
+
+    // Show arrow initially
+    setTimeout(() => {
+        arrowContainer.style.opacity = 1;
+    }, 1000);
+
+    // Hide arrow on mouse movement
+    document.addEventListener('mousemove', function () {
+        if (!isMouseMoving) {
+            isMouseMoving = true;
+            arrowContainer.style.opacity = 0;
+        }
+    });
+
+    // Show arrow if user hasn't moved the mouse after scrolling
+    window.addEventListener('scroll', function () {
+        if (!isMouseMoving) {
+            arrowContainer.style.opacity = 1;
+        }
+    });
 });
