@@ -146,6 +146,8 @@ header {
     left: 0;
     width: 100%;
     pointer-events: none;
+    height: auto;
+    display: block;
 }
 
 .gradient1 {
